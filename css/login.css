@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: #222629;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+select{
+    all:none;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main {
+  display: flex;
+  /* grid-template-rows: 60vh; */
+  /* grid-template-columns: 1fr 1fr 1fr ; */
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.login,
+.search {
+  padding: 120px;
+  width: 40%;
+}
+
+/* form */
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  background-color: #474b4f !important;
+  color: white !important;
+  border: none ;
+  font-size: 100%;
+  letter-spacing: 0.2em;
+}
+
+input[type="submit"] {
+  background-color: #474b4f;
+  color: white;
+  border: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #86c232;
+  color: white;
+}
+
+fieldset {
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+}
+/* CSS */
+.search_button {
+    background: #5e5df0 !important;
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+      NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+      EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+  }
+
+.home_button {
+  margin-left: 80px;
+  margin-top: 60px;
+}
