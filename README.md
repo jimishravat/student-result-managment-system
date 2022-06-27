@@ -1,15 +1,14 @@
 # Student Result Management System
 
-video demo - https://youtu.be/tm0XTuFnzx8
+This is a personlised result management system for the BVM college
 
 ### How do I get set up? ###
 
 * Install XAMP
 * Add the database file 
+* Import the database ( MySQL )
+* on web browser https://localhost:3000
 
-### contact ###
-projectworldsofficial@gmail.com
 
-more projects website - https://projectworlds.in
 
 
