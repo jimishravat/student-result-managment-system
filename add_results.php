@@ -56,8 +56,10 @@ if (isset($_POST['add-marks'])) {
     $b = $_SESSION['stu_dept'];
     $s = $_SESSION['stu_id'];
     $d = $_SESSION['ac_year'];
-    // var_dump($c);
     ${"sem$a$b"} = 1;
+    
+    // var_dump($sem31);
+
 
     $c_result = mysqli_query($conn, "SELECT * FROM course WHERE sem_offered='$a' AND dept_offered_id='$b'");
 
@@ -83,7 +85,7 @@ if (isset($_POST['add-marks'])) {
             echo '<script>alert("Done")</script>';
         }
     } else if ($sem31 == 1) {
-        $q = "INSERT INTO `sem11`(`s_id`, `ac_year`, `i_3CP201`, `e_3CP201`, `a_3CP201`, `i_3CP202`, `e_3CP202`, `a_3CP202`, `i_3CP203`, `e_3CP203`, `a_3CP203`, `i_3CP204`, `e_3CP204`, `a_3CP204`, `i_3CPHS02`, `e_3CPHS02`, `a_3CPHS02`, `total`, `percentage`) VALUES ('$s','$d'," . $store_marks['i_3CP201'] . "," . $store_marks['e_3CP201'] . "," . $store_marks['a_3CP201'] . "," . $store_marks['i_3CP202'] . "," . $store_marks['e_3CP202'] . "," . $store_marks['a_3CP202'] . "," . $store_marks['i_3CP203'] . "," . $store_marks['e_3CP203'] . "," . $store_marks['a_3CP203'] . "," . $store_marks['i_3CP204'] . "," . $store_marks['e_3CP204'] . "," . $store_marks['a_3CP204'] . "," . $store_marks['i_3CPHS02'] . "," . $store_marks['e_3CPHS02'] . "," . $store_marks['a_3CPHS02'] . ",'$total', '$percentage')";
+        $q = "INSERT INTO `sem31`(`s_id`, `ac_year`, `i_3CP201`, `e_3CP201`, `a_3CP201`, `i_3CP202`, `e_3CP202`, `a_3CP202`, `i_3CP203`, `e_3CP203`, `a_3CP203`, `i_3CP204`, `e_3CP204`, `a_3CP204`, `i_3CPHS02`, `e_3CPHS02`, `a_3CPHS02`, `total`, `percentage`) VALUES ('$s','$d'," . $store_marks['i_3CP201'] . "," . $store_marks['e_3CP201'] . "," . $store_marks['a_3CP201'] . "," . $store_marks['i_3CP202'] . "," . $store_marks['e_3CP202'] . "," . $store_marks['a_3CP202'] . "," . $store_marks['i_3CP203'] . "," . $store_marks['e_3CP203'] . "," . $store_marks['a_3CP203'] . "," . $store_marks['i_3CP204'] . "," . $store_marks['e_3CP204'] . "," . $store_marks['a_3CP204'] . "," . $store_marks['i_3CPHS02'] . "," . $store_marks['e_3CPHS02'] . "," . $store_marks['a_3CPHS02'] . ",'$total', '$percentage')";
         $r = mysqli_query($conn, $q);
         if ($r) {
             echo '<script>alert("Done")</script>';
