@@ -121,14 +121,19 @@ if (isset($_GET['student_id_del'])) {
 
 <body>
 
-  
+
 
     <?php include('nav.php') ?>
 
     <div class="main">
         <form action="" method="post">
             <fieldset>
-                <legend>Add Student</legend>
+                <?php if ($student_update == true) : ?>
+                    <legend>Update Student</legend>
+
+                <?php else :  ?>
+                    <legend>Add Student</legend>
+                <?php endif ?>
                 <input type="hidden" name="id" value="<?php echo $s_id; ?>">
                 <input type="text" name="s_fname" placeholder="Student First Name" value="<?php echo $s_fname ?>">
                 <input type="text" name="s_lname" placeholder="Student Last Name" value="<?php echo $s_lname ?>">

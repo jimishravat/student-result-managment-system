@@ -33,7 +33,7 @@
                 <input type="submit" value="Get Result">
             </fieldset>
         </form>
-
+    </div>
 
 
 

@@ -92,14 +92,19 @@ if (isset($_GET['course_id_del'])) {
 
 <body>
 
-    
+
 
     <?php include('nav.php') ?>
 
     <div class="main">
         <form action="" method="post">
             <fieldset>
-                <legend>Add Course</legend>
+                <?php if ($course_update == true) : ?>
+                    <legend>Update Course</legend>
+
+                <?php else :  ?>
+                    <legend>Add Course</legend>
+                <?php endif ?>
                 <!-- Course Details -->
                 <input type="text" name="course_id" placeholder="Course ID" required value="<?php echo $course_id ?>">
                 <input type="text" name="course_name" placeholder="Course Name" required value="<?php echo $course_name ?>">

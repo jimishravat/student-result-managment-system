@@ -6,12 +6,12 @@
 <div class="nav">
         <ul>
             <li class="dropdown" onclick="toggleDisplay('1')">
-                <a href="" class="dropbtn">Classes &nbsp
+                <a href="" class="dropbtn">Courses &nbsp
                     <span class="fa fa-angle-down"></span>
                 </a>
                 <div class="dropdown-content" id="1">
-                    <a href="add_course.php">Add Class</a>
-                    <a href="manage_classes.php">Manage Class</a>
+                    <a href="add_course.php">Add Course</a>
+                    <a href="manage_classes.php">Manage Courses</a>
                 </div>
             </li>
             <li class="dropdown" onclick="toggleDisplay('2')">
@@ -30,6 +30,14 @@
                 <div class="dropdown-content" id="3">
                     <a href="add_results.php">Add Results</a>
                     <a href="manage_results.php">Manage Results</a>
+                </div>
+            </li>
+            <li class="dropdown" onclick="toggleDisplay('4')">
+                <a href="#" class="dropbtn">Performance &nbsp
+                    <span class="fa fa-angle-down"></span>
+                </a>
+                <div class="dropdown-content" id="3">
+                    <a href="chart.php">Show Performance</a>
                 </div>
             </li>
         </ul>
