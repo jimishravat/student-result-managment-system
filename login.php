@@ -1,7 +1,12 @@
 <?php
+// database connection
 include('init.php');
+
+//session started 
 session_start();
 ?>
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +41,7 @@ session_start();
 
     </div>
 
+    <!-- JavaScript -->
     <script type="text/javascript">
         document.getElementById("home_button").onclick = function() {
             location.href = "./index.html";
@@ -46,23 +52,26 @@ session_start();
 
 </html>
 
+<!-- PHP  -->
 <?php
 
-
+// when the login button is hit
 if (isset($_POST["login-user"])) {
     $user = $_POST["user"];
     $password = $_POST["password"];
     $sql = "SELECT * FROM login WHERE username ='$user' and password = '$password'";
     $result = mysqli_query($conn, $sql);
 
-    // $row=mysqli_fetch_array($result);
     $count = mysqli_num_rows($result);
     echo $count;
 
+    //if credentials are correct go to dashboard
     if ($count == 1) {
         $_SESSION['is_logged'] = true;
         header("Location: dashboard.php");
-    } else {
+    } 
+    // or if credentials are incorrect alert message
+    else {
         echo '<script language="javascript">';
         echo 'alert("Invalid Username or Password")';
         echo '</script>';

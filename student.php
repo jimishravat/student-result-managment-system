@@ -113,7 +113,7 @@ while ($y = mysqli_fetch_array($help_course_query)) {
 
                     ?>
                             <tr>
-                                <td><?php echo $h['course_id'] ?></td>
+                                <td><?php echo $courseid1 ?></td>
                                 <td><?php echo $store_marks["i_$courseid1"] ?></td>
                                 <td><?php echo $store_marks["e_$courseid1"] ?></td>
                                 <td><?php echo $store_marks["a_$courseid1"] ?></td>
@@ -144,7 +144,7 @@ while ($y = mysqli_fetch_array($help_course_query)) {
 
 
     </div>
-    <div class="button" >
+    <div class="button">
         <input class=" search_button" type="submit" onclick="window.print()" value="Print">
         <input class=" search_button" type="submit" onclick="window.location.href = './index.html';" value="Home">
         <!-- <button onclick="window.print()">Print Result</button> -->
